@@ -3,7 +3,7 @@ import axios from 'axios'
 import './App.css';
 import Navinshorts from './components/Navinshorts';
 import NewsContent from './components/NewsContent/NewsContent';
-import apiKey from './data/config';
+// import apiKey from './data/config';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
   
   const newsApi = async () =>{
     try{
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      // const news = 'news';
-      const news = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}&pageSize=${loadmore}`)
+      // const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+      const news = await axios.get(`https://saurav.tech/NewsAPI/top-headlines/category/${category}/in.json`);
+      // const news = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}&pageSize=${loadmore}`)
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);
       // console.log(news.data.articles);

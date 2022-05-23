@@ -28,14 +28,14 @@ const NewsContent = ({newsArray, newsResults, loadmore, setLoadmore}) => {
                 newsArray.map((newsItem)=><NewsCard newsItem={newsItem} key={newsItem.title}/>)
               }
 
-              {
+              {/* {
                 loadmore<=newsResults && (
                   <>
                     <hr/>
                     <button className='loadmore' onClick={()=>{setLoadmore(loadmore+20)}}>Load More</button>
                   </>
                 )
-              }
+              } */}
           </div>
       </Container>
     </div>
